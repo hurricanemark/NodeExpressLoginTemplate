@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const SES_SECRET = process.env.SES_SECRET || '1432a49ecfcd0a17e8cce22554fc0b22cfaf790af8a9bc7873c7bbf235d498ccb4c87ce42530da7f76ff22a3d96e098b766980615687d9fbfb8e2b6ee2ae96a7';
 const bcrypt = require('bcrypt');
 const passport = require('passport');
 const flash = require('express-flash');
@@ -25,7 +26,7 @@ app.use(express.urlencoded({ extended: false })); // use express to parse the bo
 app.use(flash()); // use express-flash to flash messages to the user
 
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: SES_SECRET,
     resave: false,
     saveUninitialized: false
 }));

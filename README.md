@@ -99,3 +99,39 @@ The followings modules are some essential components for implementing the usual 
 
 * [passport-local](https://www.npmjs.com/package/passport-local) is one of the  strategies for authenticating with a username and password.  This module lets you authenticate using a username and password in your Node.js applications. By plugging into Passport, local authentication can be easily and unobtrusively integrated into any application or framework that supports Connect-style middleware, including Express.
 
+
+### Build and Run Docker image
+
+Generate a docker image so you can share development code on dockerhub.
+
+<strong>Build</strong>
+
+`docker build -t hurricanemark/nodejslogintemplate:1.0 .`
+
+<strong>List the docker image</strong>
+
+`docker image ls`
+
+```
+PS D:\DEVEL\NODEJS\BrainUnscramblers\NodeExpressLoginTemplate> docker image ls
+REPOSITORY                            TAG                                        IMAGE ID       CREATED          SIZE
+hurricanemark/nodejslogintemplate     1.0                                        f5eaaeef3571   43 seconds ago   961MB
+```
+
+<strong>Run docker</strong>
+
+`docker run -p5432:8080 f5eaaeef3571`
+
+```
+PS D:\DEVEL\NODEJS\BrainUnscramblers\NodeExpressLoginTemplate> docker run -p 5432:8080 f5eaaeef3571                   
+
+> nodeexpresslogintemplate@1.0.0 start /app
+> node server.js
+
+Warning: connect.session() MemoryStore is not
+designed for a production environment, as it will leak
+memory, and will not scale past a single process.
+Server is running on port 8080
+```
+
+To access the running docker container, from the browser http://[your ip address]:5432
