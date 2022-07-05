@@ -23,7 +23,7 @@ Note also, this template requires further database implementation if you wish to
 
 2. Use cachable database to store session data
 
-3. Add [express dynamic strategy](https://www.npmjs.com/package/dynamic-passport-strategies) to activate/inactivate during runtime and enable cluster support by spreading the configuration across the multiple nodejs instances.
+3. Add [express dynamic strategy](https://www.npmjs.com/package/dynamic-passport-strategies) to activate/deactivate during runtime and enable cluster support by spreading the configuration across the multiple nodejs instances.
 
 ### Getting Started
 
