@@ -14,6 +14,53 @@ Read file *package.json* to find out how to start the application.  Currently, i
 
 Note also, this template requires further database implementation if you wish to save session data on the server side.  Currently, session data is wiped out if you restarted the server.
 
+### Getting Started
+
+1. Clone this repository
+
+2. Update local development environment 
+
+`npm install`
+
+3. Run the app
+
+`npm run dev`
+
+### Sample output
+
+```
+> nodeexpresslogintemplate@1.0.0 dev D:\DEVEL\NODEJS\BrainUnscramblers\NodeExpressLoginTemplate
+> nodemon server.js
+
+[nodemon] 2.0.18
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node server.js`
+Server is running on port 9999
+Registering for  [
+  {
+    id: '1657051407426',
+    name: 'foo',
+    email: 'foo@bar',
+    password: '$2b$10$d58uZ3ol2G1uK14NMZeqdunMRjEBR27PaUHdrlQZkjQs.VDZBHPFK'
+  }
+]
+```
+
+<strong>Snapshots</strong>
+
+![register](./public/register.PNG)
+
+![login](./public/login.PNG)
+
+![Landing page](./public/homePage.PNG)
+
+Logging out will take you back to the login page.
+
+![logout, then try an invalid password](./public/invalidLogin.PNG)
+
+
 ### Modules and dependencies
 
 The followings modules are some essential components for implementing the usual application login.  It can be used as a template for those who wish to not start from scratch.  These module can be found listed in package.json file.  It is recommended that you should check with the NPM registry for throurough details on each named modules bellow.
