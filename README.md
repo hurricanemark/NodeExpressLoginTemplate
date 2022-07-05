@@ -56,7 +56,7 @@ Registering for  [
 
 ![Landing page](./public/homePage.PNG)
 
-Logging out will take you back to the login page.
+Logging out will take you back to the login page.  Now, try to login with an invalid password.
 
 ![logout, then try an invalid password](./public/invalidLogin.PNG)
 
