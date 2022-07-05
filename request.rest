@@ -1,0 +1,30 @@
+###
+
+GET http://localhost:9999
+
+
+###
+
+
+POST http://localhost:9999/register
+
+application/json
+
+{
+  "name": "test",
+  "email": "test@abc.com",
+  "password": "test"
+}
+
+###
+
+POST http://localhost:9999/login
+
+application/json
+
+{
+  "email": "test",
+  "email": "test@abc.com",
+  "password": "test"
+}
+
