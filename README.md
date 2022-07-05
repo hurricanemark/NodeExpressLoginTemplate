@@ -20,6 +20,7 @@ SESSION_SECRET=your secret
 
 Copy the output to *.env* file.
 
+<br>  
 
 For more information on the makeup of the project, read file *package.json* and to find out how to start the application.  Currently, it is `npm run dev`.
 
@@ -40,11 +41,11 @@ Note also, this template requires further database implementation if you wish to
 
 2. Update local development environment 
 
-`npm install`
+    `npm install`
 
 3. Run the app
 
-`npm run dev`
+    `npm run dev`
 
 ### Sample output
 
@@ -68,6 +69,8 @@ Registering for  [
 ]
 ```
 
+<br>  
+
 <strong>Snapshots</strong>
 
 ![register](./public/register.PNG)
@@ -80,6 +83,8 @@ Logging out will take you back to the login page.  Now, try to login with an inv
 
 ![logout, then try an invalid password](./public/invalidLogin.PNG)
 
+
+<br>   
 
 ### Modules and dependencies
 
