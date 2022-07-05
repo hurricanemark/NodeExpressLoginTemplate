@@ -21,7 +21,7 @@ Note also, this template requires further database implementation if you wish to
 
 1. Use express-validator to validate contraints
 
-2. Use cachable database to store seesion data
+2. Use cachable database to store session data
 
 3. Add [express dynamic strategy](https://www.npmjs.com/package/dynamic-passport-strategies) to activate/inactivate during runtime and enable cluster support by spreading the configuration across the multiple nodejs instances.
 
