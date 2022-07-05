@@ -4,6 +4,8 @@ Almost every application requires the login as the entry point.  This node proje
 
 Passport is a compatible middleware for express that allows you to choose which authentication strategy to use.  Some of the common strategies are local, federated with Facebook and Google, OpenID, and OAuth providers.  Since this template only implements local strategy, further exploy of passport is encouraged.
 
+The focus of this project is on middleware.  However, this is a good starting point for futher investment of your time in backend development (database integration, business logic and policy), or further improving the frontend.
+
 Note, your .env file should contain the following defines:
 
 ```
