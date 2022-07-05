@@ -23,7 +23,7 @@ Copy the output to *.env* file.
 
 For more information on the makeup of the project, read file *package.json* and to find out how to start the application.  Currently, it is `npm run dev`.
 
-Note also, this template requires further database implementation if you wish to save session data on the server side.  Currently, session data in runtime memmory is wiped out if you restarted the server.
+Note also, this template requires further database implementation if you wish to save session data on the server side.  Currently, session data in runtime memmory is wiped out if you restarted the server.  As you can guess, memmory leakage in connect.session() is a concern and should not be used in production environment.
 
 
 ### Recommend further works
