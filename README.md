@@ -76,7 +76,7 @@ Registering for  [
 
 ![Landing page](./public/homePage.PNG)
 
-Logging out will take you back to the login page.  Now, try to login with an invalid password.
+Logging out will take you back to the login page.  Now, try to login with an invalid password and notice the express-flash message cirled in red below.
 
 ![logout, then try an invalid password](./public/invalidLogin.PNG)
 
