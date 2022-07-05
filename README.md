@@ -1,6 +1,8 @@
 ## Common Application Login
 
-Almost every application requires the login as the entry point.  This node project provides the bare mininum implmementation of node-epress-passport employing local strategy.
+Almost every application requires the login as the entry point.  This node project provides the bare mininum implmementation of node-epress-passport employing local strategy.  
+
+Passport is a compatible middleware for express that allow you to choose which authentication strategy to use.  Some of the common strategies are local, federated with Facebook and Google, OpenID, and OAuth providers.  Since this template only implement local strategy, further exploy of passport is encouraged.
 
 Note, your .env file should contain the following defines:
 
@@ -13,6 +15,15 @@ SESSION_SECRET=your secret
 Read file *package.json* to find out how to start the application.  Currently, it is `npm run dev`.
 
 Note also, this template requires further database implementation if you wish to save session data on the server side.  Currently, session data is runtime memmory is wiped out if you restarted the server.
+
+
+### Recommend further works
+
+1. Use express-validator to validate contraints
+
+2. Use cachable database to store seesion data
+
+3. Add [express dynamic strategy](https://www.npmjs.com/package/dynamic-passport-strategies) to activate/inactivate during runtime and enable cluster support by spreading the configuration across the multiple nodejs instances.
 
 ### Getting Started
 
