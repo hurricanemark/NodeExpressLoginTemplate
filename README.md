@@ -1,6 +1,6 @@
 ## Common Application Login
 
-Almost every application requires the login as the entrance point.  This node project provides the bare mininum implmementation of node-epress-passport employing local strategy.
+Almost every application requires the login as the entry point.  This node project provides the bare mininum implmementation of node-epress-passport employing local strategy.
 
 Note, your .env file should contain the following defines:
 
