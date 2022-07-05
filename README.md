@@ -14,6 +14,10 @@ NODE_ENV=development
 SESSION_SECRET=your secret
 ```
 
+<strong>Create a strong session secret from the terminal</strong>
+
+`node -e "console.log(require('crypto').randomBytes(64).toString('hex'));"`
+
 Read file *package.json* to find out how to start the application.  Currently, it is `npm run dev`.
 
 Note also, this template requires further database implementation if you wish to save session data on the server side.  Currently, session data in runtime memmory is wiped out if you restarted the server.
