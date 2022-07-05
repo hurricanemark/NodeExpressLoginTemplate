@@ -14,7 +14,7 @@ SESSION_SECRET=your secret
 
 Read file *package.json* to find out how to start the application.  Currently, it is `npm run dev`.
 
-Note also, this template requires further database implementation if you wish to save session data on the server side.  Currently, session data is runtime memmory is wiped out if you restarted the server.
+Note also, this template requires further database implementation if you wish to save session data on the server side.  Currently, session data in runtime memmory is wiped out if you restarted the server.
 
 
 ### Recommend further works
