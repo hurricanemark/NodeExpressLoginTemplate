@@ -1,12 +1,12 @@
 ###
 
-GET http://localhost:9999
+GET http://localhost:3398
 
 
 ###
 
 
-POST http://localhost:9999/register
+POST http://localhost:3398/register
 
 application/json
 
@@ -18,7 +18,7 @@ application/json
 
 ###
 
-POST http://localhost:9999/login
+POST http://localhost:3398/login
 
 application/json
 

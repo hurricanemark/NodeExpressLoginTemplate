@@ -1,3 +1,41 @@
+# Passport.JS Local Session Strategy
+
+
+* Where does user.id go after passport.serializeUser has been called?
+
+The user id (provided as the second argument of the done function) is saved in the session and is later used to retrieve the whole object via the deserializeUser function.
+
+`serializeUser` determines which data of the user object should be stored in the session. The result of the serializeUser method is attached to the session as req.session.passport.user = {}. Here for instance, it would be (as we provide the user id as the key) req.session.passport.user = {id: 'xyz'}
+
+
+
+* Calling passport.deserializeUser right after it where does it fit in the workflow?
+
+The first argument of `deserializeUser` corresponds to the key of the user object that was given to the done function (see 1.). So the whole object is retrieved with the help of that key. That key here is the user id (key can be any key of the user object i.e. name,email etc). In deserializeUser that key is matched with the in memory array / database or any data resource.
+
+The fetched object is attached to the request object as req.user.
+
+
+```javascript
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});              │
+                 │ 
+                 │
+                 └─────────────────┬──→ saved to session
+                                   │    req.session.passport.user = {id: '..'}
+                                   │
+                                   ↓           
+passport.deserializeUser(function(id, done) {
+                   ┌───────────────┘
+                   │
+                   ↓ 
+    User.findById(id, function(err, user) {
+        done(err, user);
+    });            └──────────────→ user object attaches to the request as req.user   
+});
+```
+
 ## Common Application Login
 
 Almost every application requires the login as the entry point.  This node project provides the bare mininum implmementation of node-epress-passport employing local strategy.  
