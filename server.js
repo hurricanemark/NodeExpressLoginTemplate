@@ -39,7 +39,7 @@ app.use(methodOverride('_method')); // use method-override to allow the use of t
 // --------------------------------------------------------------------------------------------------------------------
 
 app.get('/', checkAuthenticated, (req, res) => {
-    res.render('index.ejs', {name: req.user.name});
+    res.render('index.ejs', {name: req.user.name, alias: req.user.alias});
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -62,13 +62,14 @@ app.get('/register', checkNotAuthenticated, (req, res) => {
 // users array is in runtime memory, and will be wiped out when the server is restarted.
 // In production, users object should be stored in a database.
 app.post('/register', checkNotAuthenticated, async (req, res) => {
-    const {name, email, password} = req.body;
+    const {name, alias, email, password} = req.body;
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
         
         users.push({
             id: Date.now().toString(), 
             name: name, 
+            alias: alias,
             email: email, 
             password: hashedPassword
         });
